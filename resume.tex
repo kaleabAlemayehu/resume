@@ -6,9 +6,9 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-
+\usepackage[a4paper, top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+% \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -180,7 +180,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Bahir Dar University}{Bahir Dar, Ethiopia}
-      {Bachelor of Engineering in Software Engineering}{Jun. 2020 -- Jun 2025}
+      {Bachelor of Engineering in Software Engineering}{Jun. 2021 -- Jun 2025}
   \resumeSubHeadingListEnd
 
 
@@ -189,7 +189,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Fullstack Intern}{Jul 2024 -- Nov 2024}
+      {Fullstack Developer}{Jul 2024 -- Nov 2024}
       {Minab IT Solutions}{Addis Ababa, Ethiopia}
       \resumeItemListStart
         \resumeItem{Design and implement a robust web-based administration panel that Hahujobs CMS uses.}
@@ -232,6 +232,7 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+
       \resumeProjectHeading
           {\textbf{Drivee} $|$ \emph{Golang, Vue.js, PostgreSQL, Docker, Memcached, TailwindCSS}} {May 2025 -- Present}
           \resumeItemListStart
@@ -241,6 +242,25 @@
             \resumeItem{Added Google and Twitter (X) SSO for login and user data access.}
             \resumeItem{Used Memcached to speed up response times by caching frequent API data.}
           \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Eagle Commerce} $|$ \emph{Golang, Go-Chi, NATS, MongoDB, Docker, Microservices, Hexagonal Architecture}} {Jul 2025 -- Jul 2025}
+          \resumeItemListStart
+            \resumeItem{Designed and developed a distributed e-commerce backend using Hexagonal Architecture. The system consisted of \texttt{order-ms}, \texttt{payment-ms}, \texttt{product-ms}, \texttt{user-ms}, and an \texttt{api-gateway}.}
+            \resumeItem{Implemented RESTful APIs using \texttt{Go-Chi} across all services.}
+            \resumeItem{Utilized \texttt{NATS} for asynchronous, event-driven communication between services.}
+            \resumeItem{Built a robust API Gateway to proxy requests to services and enforce rate limiting.}
+            \resumeItem{Leveraged MongoDB for efficient document-based data storage across services.}
+          \resumeItemListEnd
+          \resumeProjectHeading
+            {\textbf{ Werewolf Game Bot } $|$ \emph{Go, PostgreSQL, Docker, Event-Driven Architecture, Pub/Sub}} {Aug 2025 -- Present}
+            \resumeItemListStart
+              \resumeItem{Engineered a feature-rich Telegram bot in Go, used by multiple active groups to play the game of Werewolf. The bot leverages a sophisticated state machine to manage the entire game lifecycle, including complex phases, roles, and player actions.}
+              \resumeItem{Architected the application using Clean Architecture principles and a custom Pub/Sub event broker to create a decoupled, concurrent, and maintainable codebase.}
+              \resumeItem{Authored a public blog post detailing the design and implementation of the event-driven model. \href{https://kaleabalemayehu.github.io/blog/pubsub/}{\underline{blog}.}
+              \resumeItem{Drove a 4x reduction in hosting costs by analyzing performance and optimizing server resource allocation.}
+              \resumeItem{Integrated PostgreSQL for persistent data storage, using goose for schema management and sqlc to generate type-safe Go code from raw SQL, improving reliability and developer productivity.}
+              \resumeItem{Containerized the complete development environment using Docker and Docker Compose to ensure consistent and reproducible builds.}
+    \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Foodopia} $|$  \emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}} {Jun 2024 -- Jul 2024}
           \resumeItemListStart
@@ -271,6 +291,7 @@
      \textbf{Languages}{: Go, Typescript, Javascript, SQL (Postgres), Python, Lua, C/C++, HTML/CSS} \\
      \textbf{Frameworks}{: Vue, Nuxt, Gin, Hugo, Node.js, TaiwlindCSS, headless-UI, flowbite} \\
      \textbf{Developer Tools}{: Git, Docker, Neovim, Linux, Nix, VS Code} \\
+     \textbf{Technologies}{:  NATS, GraphQL, PostgreSQL, MongoDB, Redis, Memcached} \\
     }}
  \end{itemize}
 
@@ -356,7 +377,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Fullstack Intern}{Jul 2024 -- Nov 2024}
+      {Fullstack Developer}{Jul 2024 -- Nov 2024}
       {Minab IT Solutions}{Addis Ababa, Ethiopia}
       \resumeItemListStart
         \resumeItem{Design and implement a robust web-based administration panel that Hahujobs CMS uses.}
@@ -427,7 +448,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Go, Typescript, Javascript, SQL (Postgres), Python, Lua, C/C++, HTML/CSS} \\
-     \textbf{Frameworks}{: Vue, Nuxt, Gin, Hugo, Node.js, TaiwlindCSS, headless-UI, flowbite} \\
+     \textbf{Frameworks}{: Vue, Nuxt, Gin, Hugo, Node.js, TaiwlindCSS, Headless-UI, flowbite} \\
      \textbf{Developer Tools}{: Git, Docker, Neovim, Linux, Nix, VS Code} \\
     }}
  \end{itemize}
