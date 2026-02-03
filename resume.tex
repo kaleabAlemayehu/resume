@@ -190,14 +190,13 @@
 
     \resumeSubheading
       {Fullstack Developer}{Nov 2025 -- Present}
-      {Alet-Systems}{Addis Ababa, Ethiopia}
+      {Alet-Systems ( MSA with Lakipay )}{Addis Ababa, Ethiopia}
       \resumeItemListStart
         \resumeItem{Implemented a robust RESTful API for a gifter mini app on Lakipay, enabling users to send gifts to influencers.}
         \resumeItem{Designed dynamic worker pools to consume webhook requests from Redis queues and batch database operations, preventing database overload.}
         \resumeItem{Developed a Golang SDK for seamless Lakipay integration.}
         \resumeItem{Built a real-time overlay system for OBS and TikTok Studio using WebSockets to display animated overlays when gifts are sent.}
         \resumeItem{Implemented an admin panel for the gifter mini app within the Lakipay Admin Panel using Next.js, ensuring a smooth administrative experience.}
-        % \resumeItem{Integrated ArifPay into internal products.}
       \resumeItemListEnd
       
       \resumeSubheading
@@ -208,16 +207,14 @@
           \resumeItem{Designed a reliable and configurable cron job system with dynamic worker pools to process background tasks and perform batched database updates.}
           \resumeItem{Applied optimistic locking to maintain data consistency and prevent race conditions in concurrent operations.}
         \resumeItemListEnd
-
-    \resumeSubheading
-      {Fullstack Developer}{Jul 2024 -- Nov 2024}
-      {Minab IT Solutions}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \resumeItem{Design and implement a robust web-based administration panel that Hahujobs CMS uses.}
-        \resumeItem{Develop an SDK for ArifPay Integration using Golang.}
-        \resumeItem{Integrate Arifpay into the Internal Product.}
-      \resumeItemListEnd
-      
+      \resumeSubheading
+        {Fullstack Developer}{Jul 2024 -- Nov 2024}
+        {Minab IT Solutions}{Addis Ababa, Ethiopia}
+        \resumeItemListStart
+          \resumeItem{Design and implement a robust web-based administration panel that Hahujobs CMS uses.}
+          \resumeItem{Develop an SDK for ArifPay Integration using Golang.}
+          \resumeItem{Integrate Arifpay into the Internal Product.}
+        \resumeItemListEnd
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
 %     {Backend Intern}{Jun 2024 - Sep 2024}
@@ -293,27 +290,27 @@
               \resumeItem{Integrated PostgreSQL for persistent data storage, using goose for schema management and sqlc to generate type-safe Go code from raw SQL, improving reliability and developer productivity.}
               % \resumeItem{Containerized the complete development environment using Docker and Docker Compose to ensure consistent and reproducible builds.}
     \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{Foodopia} $|$  \emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}} {Jun 2024 -- Jul 2024}
-      %     \resumeItemListStart
-      %       \resumeItem{Built a recipe-sharing platform with user authentication, recipe creation, editing, filtering, and bookmarking.}
-      %       \resumeItem{Used Hasura as the GraphQL engine and Gin (Go) for custom webhook handlers with a PostgreSQL database.}
-      %       \resumeItem{Developed the frontend using Nuxt.js with Flowbite as the UI component library.}
-      %     \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{Pong} $|$ \emph{Golang, Go-Raylib}} {Mar 2025 -- Mar 2025}
-      %     \resumeItemListStart
-      %       \resumeItem{Built a multiplayer Pong game over LAN.}
-      %       \resumeItem{Developed the client side using Go-Raylib, a Go binding for the Raylib game library.}
-      %       \resumeItem{Created the server side with Golang and handled game state synchronization using UDP.}
-      %     \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{Audiobook Downloader Bot} $|$ \emph{Grammy.js, TypeScript, JSDOM}} {Aug 2024}
-      %     \resumeItemListStart
-      %       \resumeItem{Built a Telegram bot that downloads audiobooks by scraping search results from the web.}
-      %       \resumeItem{Implemented inline keyboard interactions using Grammy.js and TypeScript.}
-      %       \resumeItem{Built a web scraper using JSDOM and the Fetch API to extract audiobook links from search results.}
-      %     \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Foodopia} $|$  \emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}} {Jun 2024 -- Jul 2024}
+          \resumeItemListStart
+            \resumeItem{Built a recipe-sharing platform with user authentication, recipe creation, editing, filtering, and bookmarking.}
+            \resumeItem{Used Hasura as the GraphQL engine and Gin (Go) for custom webhook handlers with a PostgreSQL database.}
+            \resumeItem{Developed the frontend using Nuxt.js with Flowbite as the UI component library.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Pong} $|$ \emph{Golang, Go-Raylib}} {Mar 2025 -- Mar 2025}
+          \resumeItemListStart
+            \resumeItem{Built a multiplayer Pong game over LAN.}
+            \resumeItem{Developed the client side using Go-Raylib, a Go binding for the Raylib game library.}
+            \resumeItem{Created the server side with Golang and handled game state synchronization using UDP.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Audiobook Downloader Bot} $|$ \emph{Grammy.js, TypeScript, JSDOM}} {Aug 2024}
+          \resumeItemListStart
+            \resumeItem{Built a Telegram bot that downloads audiobooks by scraping search results from the web.}
+            \resumeItem{Implemented inline keyboard interactions using Grammy.js and TypeScript.}
+            \resumeItem{Built a web scraper using JSDOM and the Fetch API to extract audiobook links from search results.}
+          \resumeItemListEnd
     \resumeSubHeadingListEnd
 %
 %-----------PROGRAMMING SKILLS-----------
@@ -332,159 +329,3 @@
 \end{document}
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{document}
-
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
-\begin{center}
-    \textbf{\Huge \scshape Kaleab Alemayehu} \\ \vspace{1pt}
-    \small +251-942-323-094 $|$ \href{mailto:kaleabalemayehu04@gmail.com}{\underline{kaleabalemayehu04@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/kaleab-alemayehu-a3218422a/}{\underline{https://www.linkedin.com/in/kaleab-alemayehu-a3218422a/}} $|$
-    \href{https://github.com/kaleabAlemayehu}{\underline{github.com/kaleabAlemayehu}}
-\end{center}
-
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bahir Dar University}{Bahir Dar, Ethiopia}
-      {Bachelor of Engineering in Software Engineering}{Jun. 2020 -- Jun 2025}
-  \resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Fullstack Developer}{Jul 2024 -- Nov 2024}
-      {Minab IT Solutions}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \resumeItem{Design and implement a robust web-based administration panel that Hahujobs CMS uses.}
-        \resumeItem{Develop an SDK for ArifPay Integration using Golang.}
-        \resumeItem{Integrate Arifpay into the Internal Product.}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Backend Intern}{Jun 2024 - Sep 2024}
-%     \resumeItemListStart
-%        \resumeItem{Develop a Payroll Management System}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Backend Intern}{Jun 2024 - Sep 2024}
-      {Kuraz Technologies}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \resumeItem{Develop a Payroll Management System}
-        \resumeItem{Led a team of 6 interns in developing assigned projects under the guidance of an advisor, ensuring successful execution and collaboration throughout the process.}
-    \resumeItemListEnd
-
-    % \resumeSubheading
-    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-    %   {Southwestern University}{Georgetown, TX}
-    %   \resumeItemListStart
-    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-    %     \resumeItem{Developed a game in Java to test the generated dungeons}
-    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-    %   \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Drivee} \hfill May 2025 -- Present}
-          {\emph{Golang, Vue.js, PostgreSQL, Docker, Memcached, TailwindCSS}}
-          \resumeItemListStart
-            \resumeItem{Building a peer-to-peer car rental platform where users can list and rent vehicles.}
-            \resumeItem{Developed the backend using Go's \texttt{net/http} for REST APIs.}
-            \resumeItem{Created the frontend with Vue.js, using TailwindCSS, without any external UI libraries.}
-            \resumeItem{Added Google and Twitter (X) SSO for login and user data access.}
-            \resumeItem{Used Memcached to speed up response times by caching frequent API data.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Foodopia} \hfill Jun 2024 -- Jul 2024}
-          {\emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}}
-          \resumeItemListStart
-            \resumeItem{Built a recipe-sharing platform with user authentication, recipe creation, editing, filtering, and bookmarking.}
-            \resumeItem{Used Hasura as the GraphQL engine and Gin (Go) for custom webhook handlers with a PostgreSQL database.}
-            \resumeItem{Developed the frontend using Nuxt.js with Flowbite as the UI component library.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Go, Typescript, Javascript, SQL (Postgres), Python, Lua, C/C++, HTML/CSS} \\
-     \textbf{Frameworks}{: Vue, Nuxt, Gin, Hugo, Node.js, TaiwlindCSS, Headless-UI, flowbite} \\
-     \textbf{Developer Tools}{: Git, Docker, Neovim, Linux, Nix, VS Code} \\
-    }}
- \end{itemize}
-
-
-%-------------------------------------------
-\end{document}
