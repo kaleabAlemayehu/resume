@@ -189,6 +189,27 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
+      {Fullstack Developer}{Nov 2025 -- Present}
+      {Alet-Systems}{Addis Ababa, Ethiopia}
+      \resumeItemListStart
+        \resumeItem{Implemented a robust RESTful API for a gifter mini app on Lakipay, enabling users to send gifts to influencers.}
+        \resumeItem{Designed dynamic worker pools to consume webhook requests from Redis queues and batch database operations, preventing database overload.}
+        \resumeItem{Developed a Golang SDK for seamless Lakipay integration.}
+        \resumeItem{Built a real-time overlay system for OBS and TikTok Studio using WebSockets to display animated overlays when gifts are sent.}
+        \resumeItem{Implemented an admin panel for the gifter mini app within the Lakipay Admin Panel using Next.js, ensuring a smooth administrative experience.}
+        % \resumeItem{Integrated ArifPay into internal products.}
+      \resumeItemListEnd
+      
+      \resumeSubheading
+        {Mid-Level Backend Developer}{Nov 2025 -- Present}
+        {Awura Technologies}{Addis Ababa, Ethiopia}
+        \resumeItemListStart
+          \resumeItem{Implemented a RESTful API using state machines and event-driven architecture, publishing messages to RabbitMQ for user notifications.}
+          \resumeItem{Designed a reliable and configurable cron job system with dynamic worker pools to process background tasks and perform batched database updates.}
+          \resumeItem{Applied optimistic locking to maintain data consistency and prevent race conditions in concurrent operations.}
+        \resumeItemListEnd
+
+    \resumeSubheading
       {Fullstack Developer}{Jul 2024 -- Nov 2024}
       {Minab IT Solutions}{Addis Ababa, Ethiopia}
       \resumeItemListStart
@@ -232,7 +253,18 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-
+       \resumeProjectHeading
+         {\textbf{Payment Gateway Service} $|$ \emph{Golang, PostgreSQL, Docker, RabbitMQ, Echo}} {Dec 2025 -- Present}
+         \resumeItemListStart
+           \resumeItem{Built an idempotent payment service using Golang, PostgreSQL, and RabbitMQ.}
+           \resumeItem{Developed RESTful APIs using Go’s \texttt{Echo} framework.}
+           \resumeItem{Implemented the \texttt{Transactional Outbox Pattern} to handle dual-write consistency and ensure idempotent message publishing.}
+           \resumeItem{Designed dynamic worker pools to process payments asynchronously and deliver results to client webhook endpoints.}
+           \resumeItem{Applied row-level locking to ensure data consistency and prevent race conditions during concurrent transactions.}
+           \resumeItem{Implemented retry queues and dead-letter queues to reliably handle failed payment events.}
+           \resumeItem{Containerized the full development environment using Docker and Docker Compose for consistent and reproducible builds.}
+        \resumeItemListEnd
+          
       \resumeProjectHeading
           {\textbf{Drivee} $|$ \emph{Golang, Vue.js, PostgreSQL, Docker, Memcached, TailwindCSS}} {May 2025 -- Present}
           \resumeItemListStart
@@ -259,15 +291,15 @@
               \resumeItem{Authored a public blog post detailing the design and implementation of the event-driven model. \href{https://kaleabalemayehu.github.io/blog/pubsub/}{\underline{blog}.}
               \resumeItem{Drove a 4x reduction in hosting costs by analyzing performance and optimizing server resource allocation.}
               \resumeItem{Integrated PostgreSQL for persistent data storage, using goose for schema management and sqlc to generate type-safe Go code from raw SQL, improving reliability and developer productivity.}
-              \resumeItem{Containerized the complete development environment using Docker and Docker Compose to ensure consistent and reproducible builds.}
+              % \resumeItem{Containerized the complete development environment using Docker and Docker Compose to ensure consistent and reproducible builds.}
     \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Foodopia} $|$  \emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}} {Jun 2024 -- Jul 2024}
-          \resumeItemListStart
-            \resumeItem{Built a recipe-sharing platform with user authentication, recipe creation, editing, filtering, and bookmarking.}
-            \resumeItem{Used Hasura as the GraphQL engine and Gin (Go) for custom webhook handlers with a PostgreSQL database.}
-            \resumeItem{Developed the frontend using Nuxt.js with Flowbite as the UI component library.}
-          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{Foodopia} $|$  \emph{Nuxt.js, Golang, PostgreSQL, Hasura, Apollo GraphQL, Docker, Flowbite}} {Jun 2024 -- Jul 2024}
+      %     \resumeItemListStart
+      %       \resumeItem{Built a recipe-sharing platform with user authentication, recipe creation, editing, filtering, and bookmarking.}
+      %       \resumeItem{Used Hasura as the GraphQL engine and Gin (Go) for custom webhook handlers with a PostgreSQL database.}
+      %       \resumeItem{Developed the frontend using Nuxt.js with Flowbite as the UI component library.}
+      %     \resumeItemListEnd
       % \resumeProjectHeading
       %     {\textbf{Pong} $|$ \emph{Golang, Go-Raylib}} {Mar 2025 -- Mar 2025}
       %     \resumeItemListStart
@@ -289,9 +321,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Go, Typescript, Javascript, SQL (Postgres), Python, Lua, C/C++, HTML/CSS} \\
-     \textbf{Frameworks}{: Vue, Nuxt, Gin, Hugo, Node.js, TaiwlindCSS, headless-UI, flowbite} \\
+     \textbf{Frameworks}{: Vue, React, Nuxt, Next, Gin, Echo, Hugo, Node.js, TaiwlindCSS, headless-UI, Shadcn/ui, flowbite} \\
      \textbf{Developer Tools}{: Git, Docker, Neovim, Linux, Nix, VS Code} \\
-     \textbf{Technologies}{:  NATS, GraphQL, PostgreSQL, MongoDB, Redis, Memcached} \\
+     \textbf{Technologies}{: Kafka, NATS, RabbitMQ, GraphQL, PostgreSQL, SQLite, MongoDB, Redis, Memcached} \\
     }}
  \end{itemize}
 
