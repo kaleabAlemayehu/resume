@@ -1,0 +1,51 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'resume.tex'
+      - '.github/workflows/build-resume.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'resume.tex'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.tex
+          texlive_version: latest
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: resume.pdf
+          retention-days: 30
+
+      - name: Commit and push PDF (main branch only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # Check if PDF changed
+          if git diff --quiet resume.pdf 2>/dev/null; then
+            echo "No changes to PDF"
+          else
+            git add resume.pdf
+            git commit -m "chore: update resume PDF [skip ci]"
+            git push
+          fi
