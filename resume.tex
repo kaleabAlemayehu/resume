@@ -54,62 +54,6 @@
 
 % Sections formatting
 \titleformat{\section}{
-%-------------------------
-% Resume in Latex
-% Author : Kaleab Alemayehu
-% Based off of: https://github.com/jakegut/resume
-% License : MIT
-%------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
@@ -254,7 +198,7 @@
          {\textbf{Payment Gateway Service} $|$ \emph{Golang, PostgreSQL, Docker, RabbitMQ, Echo}} {Dec 2025 -- Present}
          \resumeItemListStart
            \resumeItem{Built an idempotent payment service using Golang, PostgreSQL, and RabbitMQ.}
-           \resumeItem{Developed RESTful APIs using Go’s \texttt{Echo} framework.}
+           \resumeItem{Developed RESTful APIs using Go's \texttt{Echo} framework.}
            \resumeItem{Implemented the \texttt{Transactional Outbox Pattern} to handle dual-write consistency and ensure idempotent message publishing.}
            \resumeItem{Designed dynamic worker pools to process payments asynchronously and deliver results to client webhook endpoints.}
            \resumeItem{Applied row-level locking to ensure data consistency and prevent race conditions during concurrent transactions.}
@@ -327,5 +271,3 @@
 
 %-------------------------------------------
 \end{document}
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
