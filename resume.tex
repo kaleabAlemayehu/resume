@@ -131,9 +131,21 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
+   \resumeSubheading
+     {Mid-Level Backend Developer}{Nov 2025 -- Present}
+     {Awura Technologies}{Addis Ababa, Ethiopia}
+     \resumeItemListStart
+       \resumeItem{Engineered a high-performance gRPC API using ConnectRPC and Go, implementing a modular, event-driven architecture to orchestrate real-time P2P payment flows and ledger synchronization.}
+       \resumeItem{Architected an asynchronous notification and state-management system to handle high-concurrency contributions, triggering low-latency payout events upon successful epoch completion.}
+       \resumeItem{Developed a cryptographically secure selection engine utilizing CSPRNG primitives to ensure verifiable fairness and transparency in automated rotating resource allocation cycles.}
+       \resumeItem{Designed a scalable modular monolith for peer-to-peer financial rotation, integrating identity verification and OTP-secured transactions within a strictly typed, event-sourced backend.}
+       \resumeItem{Implemented a RESTful API using state machines and event-driven architecture, publishing messages to RabbitMQ for user notifications.}
+       \resumeItem{Implemented a Payment Service that is idempotent and uses eventually consistency to ensure data integrity.}
+       \resumeItem{Designed a reliable and configurable cron job system with dynamic worker pools to process background tasks and perform batched database updates.}
+       \resumeItem{Applied optimistic locking to maintain data consistency and prevent race conditions in concurrent operations.}
+     \resumeItemListEnd
     \resumeSubheading
-      {Fullstack Developer}{Nov 2025 -- Present}
+      {Fullstack Developer}{Nov 2025 -- Feb 2026}
       {Alet-Systems ( MSA with Lakipay )}{Addis Ababa, Ethiopia}
       \resumeItemListStart
         \resumeItem{Implemented a robust RESTful API for a gifter mini app on Lakipay, enabling users to send gifts to influencers.}
@@ -142,15 +154,6 @@
         \resumeItem{Built a real-time overlay system for OBS and TikTok Studio using WebSockets to display animated overlays when gifts are sent.}
         \resumeItem{Implemented an admin panel for the gifter mini app within the Lakipay Admin Panel using Next.js, ensuring a smooth administrative experience.}
       \resumeItemListEnd
-      
-      \resumeSubheading
-        {Mid-Level Backend Developer}{Nov 2025 -- Present}
-        {Awura Technologies}{Addis Ababa, Ethiopia}
-        \resumeItemListStart
-          \resumeItem{Implemented a RESTful API using state machines and event-driven architecture, publishing messages to RabbitMQ for user notifications.}
-          \resumeItem{Designed a reliable and configurable cron job system with dynamic worker pools to process background tasks and perform batched database updates.}
-          \resumeItem{Applied optimistic locking to maintain data consistency and prevent race conditions in concurrent operations.}
-        \resumeItemListEnd
       \resumeSubheading
         {Fullstack Developer}{Jul 2024 -- Nov 2024}
         {Minab IT Solutions}{Addis Ababa, Ethiopia}
@@ -159,15 +162,6 @@
           \resumeItem{Develop an SDK for ArifPay Integration using Golang.}
           \resumeItem{Integrate Arifpay into the Internal Product.}
         \resumeItemListEnd
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Backend Intern}{Jun 2024 - Sep 2024}
-%     \resumeItemListStart
-%        \resumeItem{Develop a Payroll Management System}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
     \resumeSubheading
       {Backend Intern}{Jun 2024 - Sep 2024}
       {Kuraz Technologies}{Addis Ababa, Ethiopia}
@@ -195,6 +189,16 @@
 \section{Projects}
     \resumeSubHeadingListStart
        \resumeProjectHeading
+         {\textbf{Mini CDC (Change Data Capture) Engine} $|$ \emph{Golang, PostgreSQL, pgx}} {Apr 2026 -- Present}
+         \resumeItemListStart
+           \resumeItem{Built a lightweight Change Data Capture (CDC) engine in Golang by streaming database changes directly from PostgreSQL WAL using logical replication.}
+           \resumeItem{Implemented a replication client using \texttt{pgx} and \texttt{pglogrepl} to consume and process WAL events in real time.}
+           \resumeItem{Parsed logical decoding output (\texttt{wal2json}) into structured events for INSERT, UPDATE, and DELETE operations.}
+           \resumeItem{Designed an event processing pipeline to normalize and stream database changes as JSON for downstream consumers.}
+           \resumeItem{Tracked Log Sequence Numbers (LSN) to ensure reliable event processing and enable resume-from-failure semantics.}
+           \resumeItem{Handled connection failures and reconnections for long-running streaming processes.}
+         \resumeItemListEnd
+       \resumeProjectHeading
          {\textbf{Payment Gateway Service} $|$ \emph{Golang, PostgreSQL, Docker, RabbitMQ, Echo}} {Dec 2025 -- Present}
          \resumeItemListStart
            \resumeItem{Built an idempotent payment service using Golang, PostgreSQL, and RabbitMQ.}
@@ -205,7 +209,6 @@
            \resumeItem{Implemented retry queues and dead-letter queues to reliably handle failed payment events.}
            \resumeItem{Containerized the full development environment using Docker and Docker Compose for consistent and reproducible builds.}
         \resumeItemListEnd
-          
       \resumeProjectHeading
           {\textbf{Drivee} $|$ \emph{Golang, Vue.js, PostgreSQL, Docker, Memcached, TailwindCSS}} {May 2025 -- Present}
           \resumeItemListStart
@@ -224,7 +227,7 @@
             \resumeItem{Built a robust API Gateway to proxy requests to services and enforce rate limiting.}
             \resumeItem{Leveraged MongoDB for efficient document-based data storage across services.}
           \resumeItemListEnd
-          \resumeProjectHeading
+      \resumeProjectHeading
             {\textbf{ Werewolf Game Bot } $|$ \emph{Go, PostgreSQL, Docker, Event-Driven Architecture, Pub/Sub}} {Aug 2025 -- Present}
             \resumeItemListStart
               \resumeItem{Engineered a feature-rich Telegram bot in Go, used by multiple active groups to play the game of Werewolf. The bot leverages a sophisticated state machine to manage the entire game lifecycle, including complex phases, roles, and player actions.}
