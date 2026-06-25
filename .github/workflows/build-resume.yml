@@ -26,6 +26,9 @@ jobs:
           root_file: resume.tex
           texlive_version: latest
 
+      - name: Rename PDF to Kaleab_Alemayehu_Resume.pdf
+        run: mv resume.pdf Kaleab_Alemayehu_Resume.pdf
+
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
@@ -41,7 +44,7 @@ jobs:
 
           # Check if PDF exists and is different from what's in git
           if [ -f Kaleab_Alemayehu_Resume.pdf ]; then
-            git add resume.pdf
+            git add Kaleab_Alemayehu_Resume.pdf
             git diff --cached --quiet || git commit -m "chore: update resume PDF [skip ci]"
             git push
           else
