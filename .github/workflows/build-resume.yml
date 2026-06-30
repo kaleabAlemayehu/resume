@@ -2,9 +2,8 @@ name: Build Resume PDF
 
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches:
+      - '**'
   workflow_dispatch:
 
 permissions:
@@ -26,28 +25,40 @@ jobs:
           root_file: resume.tex
           texlive_version: latest
 
-      - name: Rename PDF to Kaleab_Alemayehu_Resume.pdf
-        run: mv resume.pdf Kaleab_Alemayehu_Resume.pdf
+      - name: Generate artifact name
+        id: artifact
+        run: |
+          BRANCH_NAME="${GITHUB_REF_NAME}"
+          if [ "$BRANCH_NAME" = "master" ]; then
+            echo "name=resume" >> $GITHUB_OUTPUT
+            echo "pdf-name=Kaleab_Alemayehu_Resume.pdf" >> $GITHUB_OUTPUT
+          else
+            echo "name=resume-${BRANCH_NAME}" >> $GITHUB_OUTPUT
+            echo "pdf-name=Kaleab_Alemayehu_Resume_${BRANCH_NAME}.pdf" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Rename PDF
+        run: mv resume.pdf "${{ steps.artifact.outputs.pdf-name }}"
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: Kaleab_Alemayehu_Resume.pdf
-          retention-days: 30
+          name: ${{ steps.artifact.outputs.name }}
+          path: ${{ steps.artifact.outputs.pdf-name }}
+          retention-days: 90
 
       - name: Commit and push PDF
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        if: github.event_name == 'push'
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-          # Check if PDF exists and is different from what's in git
-          if [ -f Kaleab_Alemayehu_Resume.pdf ]; then
-            git add Kaleab_Alemayehu_Resume.pdf
+          PDF_FILE="${{ steps.artifact.outputs.pdf-name }}"
+          if [ -f "$PDF_FILE" ]; then
+            git add "$PDF_FILE"
             git diff --cached --quiet || git commit -m "chore: update resume PDF [skip ci]"
             git push
           else
-            echo "Kaleab_Alemayehu_Resume.pdf not found"
+            echo "$PDF_FILE not found"
             exit 1
           fi
