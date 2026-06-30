@@ -188,16 +188,19 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-       \resumeProjectHeading
-         {\textbf{Mini CDC (Change Data Capture) Engine} $|$ \emph{Golang, PostgreSQL, pgx}} {May 2026 -- Present}
-         \resumeItemListStart
-           \resumeItem{Built a lightweight Change Data Capture (CDC) engine in Golang by streaming database changes directly from PostgreSQL WAL using logical replication.}
-           \resumeItem{Implemented a replication client using \texttt{pgx} and \texttt{pglogrepl} to consume and process WAL events in real time.}
-           \resumeItem{Parsed logical decoding output (\texttt{wal2json}) into structured events for INSERT, UPDATE, and DELETE operations.}
-           \resumeItem{Designed an event processing pipeline to normalize and stream database changes as JSON for downstream consumers.}
-           \resumeItem{Tracked Log Sequence Numbers (LSN) to ensure reliable event processing and enable resume-from-failure semantics.}
-           \resumeItem{Handled connection failures and reconnections for long-running streaming processes.}
-         \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Mini CDC (Change Data Capture) Engine} $|$ \emph{Golang, PostgreSQL, pgx, Kafka}} {Apr 2026 -- Present}
+  \resumeItemListStart
+    \resumeItem{Built a lightweight embeddable CDC engine in Go that streams row-level changes directly from PostgreSQL WAL using logical replication.}
+    \resumeItem{Implemented a replication client using \texttt{pglogrepl} to consume and decode WAL events in real time via the \texttt{pgoutput} plugin.}
+    \resumeItem{Decoded logical replication output into structured \texttt{ChangeEvent} payloads for INSERT, UPDATE, and DELETE operations.}
+    \resumeItem{Designed a modular pipeline with a \texttt{PostgresSource}, buffered channel for backpressure, and a \texttt{KafkaSink} for downstream event distribution.}
+    \resumeItem{Implemented LSN acknowledgement after sink confirmation to prevent WAL disk bloat and guarantee at-least-once delivery.}
+    \resumeItem{Leveraged replication slots for resume-from-failure semantics, enabling the engine to recover and continue from the last confirmed LSN.}
+    \resumeItem{Handled connection drops with exponential backoff and jitter for long-running replication streams.}
+    \resumeItem{Presented the engine at a company hackathon, receiving interest from the CEO and Head of Engineering.}
+    \resumeItem{Authored a technical blog post detailing the architecture and internals — \href{https://kaleabalemayehu.github.io/blog/cdc}{Eve Doesn't Poll, She Listens}.}
+  \resumeItemListEnd
        \resumeProjectHeading
          {\textbf{Payment Gateway Service} $|$ \emph{Golang, PostgreSQL, Docker, RabbitMQ, Echo}} {Dec 2025 -- Present}
          \resumeItemListStart
@@ -208,6 +211,17 @@
            \resumeItem{Applied row-level locking to ensure data consistency and prevent race conditions during concurrent transactions.}
            \resumeItem{Implemented retry queues and dead-letter queues to reliably handle failed payment events.}
            \resumeItem{Containerized the full development environment using Docker and Docker Compose for consistent and reproducible builds.}
+          \resumeItemListEnd
+       \resumeProjectHeading
+         {\textbf{Araray} $|$ \emph{Node.js, Express, TypeScript, React, Redux, MongoDB, AWS S3, Docker}} {Oct 2025 -- Oct 2025}
+         \resumeItemListStart
+           \resumeItem{Built a full-stack Spotify-like music platform with a RESTful API backend and a React frontend.}
+          \resumeItem{Developed the backend using Node.js, Express, and TypeScript with full CRUD operations for song and playlist management.}
+          \resumeItem{Integrated AWS S3 for production file storage and local storage fallback for development.}
+          \resumeItem{Managed frontend state with Redux and Redux Saga for asynchronous side effects including playback, playlists, and statistics.}
+          \resumeItem{Built a statistics dashboard with artist and genre charts for visualizing the music library.}
+          \resumeItem{Containerized the full development environment using Docker and Docker Compose.}
+          \resumeItem{Deployed the frontend on Vercel and the API on Render — \href{https://araray.vercel.app}{araray.vercel.app} $|$ \href{https://araray.onrender.com}{araray.onrender.com}.}
         \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Drivee} $|$ \emph{Golang, Vue.js, PostgreSQL, Docker, Memcached, TailwindCSS}} {May 2025 -- Present}
