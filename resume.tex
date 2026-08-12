@@ -132,8 +132,8 @@
 \section{Experience}
   \resumeSubHeadingListStart
   \resumeSubheading
-     {Mid-Level Backend Developer}{Nov 2025 -- Present}
-     {Awura Technologies}{Addis Ababa, Ethiopia}
+    {Mid-Level Backend Developer}{Nov 2025 -- Present}
+    {Awura Technologies}{Addis Ababa, Ethiopia}
     \resumeItemListStart
       \resumeItem{Led the backend team in designing and delivering the core P2P financial rotation platform, coordinating architecture decisions and ensuring consistent implementation across the team.}
       \resumeItem{Engineered a high-performance gRPC API using ConnectRPC and Go, implementing a modular, event-driven architecture to orchestrate real-time P2P payment flows and ledger synchronization.}
@@ -142,9 +142,13 @@
       \resumeItem{Designed a scalable modular monolith for peer-to-peer financial rotation, integrating identity verification and OTP-secured transactions within a strictly typed, event-sourced backend.}
       \resumeItem{Engineered a real-time bid system using Gorilla WebSocket to stream live bids to connected clients, handling high-concurrency bid submissions and automatically selecting the highest bid upon auction completion.}
       \resumeItem{Implemented a RESTful API using state machines and event-driven architecture, publishing messages to RabbitMQ for user notifications.}
-      \resumeItem{Implemented a Payment Service that is idempotent and uses eventually consistency to ensure data integrity.}
+      \resumeItem{Implemented a Payment Service that is idempotent and uses eventual consistency to ensure data integrity.}
       \resumeItem{Designed a reliable and configurable cron job system with dynamic worker pools to process background tasks and perform batched database updates.}
       \resumeItem{Applied optimistic locking to maintain data consistency and prevent race conditions in concurrent operations.}
+      \resumeItem{Engineered a time-scheduled CMS content lifecycle worker using Asynq to automatically trigger state transitions (activation and expiration) for advertisements and community media based on scheduled start and end timestamps.}
+      \resumeItem{Built an automated referral reward engine and state machine supporting real-time eligibility tracking, claim verification, and administrative fulfillment workflows.}
+      \resumeItem{Engineered automated bot participants and system liquidity actors to dynamically engage in auction bidding and drive continuous round execution.}
+      \resumeItem{Established a containerized testing pipeline leveraging \texttt{testcontainers-go} for automated integration testing against ephemeral PostgreSQL and Redis Docker containers.}
     \resumeItemListEnd
     \resumeSubheading
       {Fullstack Developer}{Nov 2025 -- Feb 2026}
